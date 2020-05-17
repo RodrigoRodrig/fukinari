@@ -12,11 +12,8 @@ from api import *
 
 a = Gui()
 a.main()
-token = a.token
-a.bye()
-token = token
-print(token)
-
+token = a.json_token
+print(f"Debug {token}")
 
 computer = wmi.WMI()
 computer_info = computer.Win32_ComputerSystem()[0]
@@ -26,7 +23,7 @@ gpu_info = computer.Win32_VideoController()[0]
 
 os_name = os_info.Name.encode('utf-8').split(b'|')[0]
 os_version = ' '.join([os_info.Version, os_info.BuildNumber])
-system_ram = float(os_info.TotalVisibleMemorySize) / 1048576  # KB to GB
+system_ram = int(os_info.TotalVisibleMemorySize) / 1048576  # KB to GB
 Chnls=[]
 platM = platform.machine()
 osName = os_name
@@ -35,6 +32,8 @@ ram = system_ram
 gpu = gpu_info.Name
 activity = discord.Game
 status = cycle(['Feito em python com muito stackoverflow', 'Use --help para obter suporte', 'Ha uma diferenca entre conhecer o caminho e percorrer o caminho.', 'Ferroxy#2071 melhor programador do mundo', 'https://github.com/Ferroxyy/fukinari'])
+
+
 
 
 async def get_prefix(client, message):
