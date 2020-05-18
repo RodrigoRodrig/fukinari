@@ -10,7 +10,7 @@ The project have 2 branches, master and gui
 #
 
 >Contacts:
-<li>Discord: kloudz#6827 - yea, i used id change trick</li>
+<li>Discord: Ferroxy#6827</li>
   
 #
 
