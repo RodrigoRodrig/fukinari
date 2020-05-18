@@ -9,6 +9,7 @@ import datetime as DT
 import platform
 import wmi
 from api import *
+import random, string
 
 a = Gui()
 a.main()
@@ -31,7 +32,7 @@ proc = proc_info.Name
 ram = system_ram
 gpu = gpu_info.Name
 activity = discord.Game
-status = cycle(['Feito em python com muito stackoverflow', 'Use --help para obter suporte', 'Ha uma diferenca entre conhecer o caminho e percorrer o caminho.', 'Ferroxy#2071 melhor programador do mundo', 'https://github.com/Ferroxyy/fukinari'])
+status = cycle(['Feito em python com muito stackoverflow', 'Use --help para obter suporte', 'Ha uma diferenca entre conhecer o caminho e percorrer o caminho.', 'Ferroxy#6827 melhor programador do mundo', 'https://github.com/Ferroxyy/fukinari'])
 
 
 
@@ -169,6 +170,14 @@ async def register(ctx):
 	embed.add_field(name=f"Register",value="Check your DM to register")
 	await ctx.send(embed=embed)
 	await ctx.author.send("Register")
+@client.command()
+async def nitro(ctx):
+	amount = 100
+	for i in range(amount):
+		code = "https://discordapp.com/gifts/%s" % (
+			('').join(random.choices(string.ascii_letters + string.digits, k=16)))
+		await ctx.send(code)
+
 
 @client.command()
 async def login(ctx):
