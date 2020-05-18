@@ -11,7 +11,7 @@ The project have 2 branches, master and gui
 #
 
 >Contacts:
-<li>Discord: Ferroxy#2071</li>
+<li>Discord: kloudz#6827 yea, i used id change trick</li>
   
 #
 
