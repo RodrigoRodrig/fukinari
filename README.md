@@ -1,5 +1,5 @@
 # fukinari
-A Open-Source discord bot written in python
+An Open-Source discord bot written in python
 #
 CLI Branch
 #
